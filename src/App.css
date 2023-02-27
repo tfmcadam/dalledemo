@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: black;
+  color: white;
 }
 
 .App-logo {
@@ -35,4 +37,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.flex{
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.btn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+}
+
+.image {
+  height: 100%px;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+    -moz-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+    box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.shadowBox{
+  margin: 0 auto;
+  /* box-shadow: 0px 9px 30px 0px rgba(255, 149, 5, 0.3); */
+  width: 30%;
+  height: 30%;
+  border-radius: 20px;
 }
