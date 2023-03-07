@@ -1,12 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
 .App {
+  margin-top: 60px;
   text-align: center;
   background-color: black;
   color: white;
 }
 
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} 
+
+nav ul li{
+  float: left;
+}
+
+li a{
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover {
+  background-color: rgb(97, 218, 251);
+  color: #333;
+}
+
+
 .App-logo {
-  width: 40vmin;
-  /* height: 30vmin; */
+  /* width: 40vmin;
+  height: 30vmin; */
   pointer-events: none;
 }
 
@@ -126,3 +160,66 @@ textarea{
     color: white;
     font-size: 20px;
   }
+
+.text-color {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.heading {
+  font-family: 'Tilt Prism', cursive;
+  font-size: 60px;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.grid-child {
+  border: 4px solid whitesmoke;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+.grid-child:hover {
+  background-color: whitesmoke;
+  color: #212121;
+}
+
+.grid-child h3{
+  font-weight: 900;
+}
+
+.grid-child p {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.text-area {
+  background-color: #333;
+  font-size: 20px;
+  box-shadow: none;
+  border: 4px solid whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  width: 80%;
+}
+
+.action-btn {
+  background-color: #333;
+  color: whitesmoke;
+  font-family: tilt prism;
+  font-size: 30px;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 4px solid whitesmoke;
+}
+
+.action-btn:hover{
+  background-color: black;
+}
