@@ -1,4 +1,5 @@
 import React from "react";
+import { LoadingSpinner } from "./LoadingSinner";
 
 export default function Translation({doStuff, setInput, result}) {
     return (
@@ -11,7 +12,8 @@ export default function Translation({doStuff, setInput, result}) {
                 <button className="action-btn" onClick={doStuff} >Let's Go!</button>
             </div>
             
-            <h3 className="result-text">{result.length > 0 ? result : "No response given"}</h3>
+            
+            <h3 className="result-text">{result.length > 0 ? result : "I have No response until you ask, but be careful what you ask for!"}</h3>
         </div>
     )
 }

@@ -1,6 +1,45 @@
 
 export const arrayItems = [
     {
+        name: "Marv with the honest answers",
+        id: "marv",
+        description: "He's a straight shooter",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0.5,
+            max_tokens: 60,
+            top_p: 0.3,
+            frequency_penalty: 0.5,
+            presence_penalty: 0.0,
+        },
+    },
+    {
+        name: "Recipe Creator",
+        id: "recipes",
+        description: "Create a recipe from a list of ingredients",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0.3,
+            max_tokens: 120,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.0,
+        }
+    },
+    {
+        name: "Micro Horror Story Creator",
+        id: "MHScreator",
+        description: "Creates two to three sentance short horror stories from a topic input.",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0.8,
+            max_tokens: 60,
+            top_p: 1.0,
+            frequency_penalty: 0.5,
+            presence_penalty: 0.0,
+        },
+    },
+    {
         name: 'Q&A',
         id: "q&a",
         description: "Answer questions based on existing knowledge.",
@@ -11,37 +50,85 @@ export const arrayItems = [
             top_p: 1,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
-            stop: ["\n"],
         },
     },
     {
         name: "Grammar Correction",
         id: "grammarCorrection",
-        description: "Corrects sentances into standard English."
+        description: "Corrects sentances into standard English.",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0,
+            max_tokens: 60,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.0,
+        },
+        
     },
     {
         name: "Summarize for a 2nd Grader",
         id: "summary",
-        description: "Translates difficult text into simplier concepts."
+        description: "Translates difficult text into simplier concepts.",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0.7,
+            max_tokens: 64,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.0,
+        }
     },
     {
         name: "English to other languages",
         id: "translate",
-        description:"Translates English text into French, Spanish, and Japanese."
+        description:"Translates English text into French, Spanish, and Japanese.",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0.3,
+            max_tokens: 100,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.0,
+        },
     },
     {
         name: "Movie to Emoji",
         id: "movieToEmoji",
-        description: "Convert Movie Titles into emoji."
+        description: "Convert Movie Titles into emoji.",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0.8,
+            max_tokens: 60,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.0,
+        },
     },
     {
         name: "Explain Code",
         id:"explainCode",
-        description: "Explain a complicated piece of Code."
+        description: "Explain a complicated piece of Code.",
+        option: {
+            model: "code-davinci-002",
+            temperature: 0,
+            max_tokens: 64,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.0,
+        },
     },
     {
         name: "Javascript to Python",
         id: "jstopy",
-        description: "Convert simple JavaScript expressions to Python."
+        description: "Convert simple JavaScript expressions to Python.",
+        option: {
+            model: "code-davinci-002",
+            temperature: 0,
+            max_tokens: 64,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.0,
+        },
     },
 ];

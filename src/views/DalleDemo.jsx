@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 const { Configuration, OpenAIApi, } = require("openai")
 const configuaration = new Configuration({
     apiKey: process.env.REACT_APP_API_KEY,
+    
 });
 const openai = new OpenAIApi(configuaration);
 
