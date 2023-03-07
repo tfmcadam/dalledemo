@@ -173,10 +173,11 @@ textarea{
 
 .grid-main {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+  grid-gap: 2rem;
+  padding: 2rem;
 }
+  
 
 .grid-child {
   border: 4px solid whitesmoke;
