@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
 .App {
-  margin-top: 60px;
+  margin-top: 80px;
   text-align: center;
   background-color: black;
   color: white;
 }
 
-nav{
+/* ! navbar */
+nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -18,15 +20,16 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-} 
+}
 
-nav ul li{
+nav ul li {
   float: left;
 }
 
-li a{
+li a {
   display: block;
-  padding: 14px 16px;
+  font-size: 20px;
+  padding: 26px 16px;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -37,10 +40,85 @@ li a:hover {
   color: #333;
 }
 
+.open-btn {
+  padding: 14px;
+  background-color: #141212;
+  color: white;
+  font-size: 20px;
+  border: 0;
+}
+
+.open-btn:hover {
+  background-color: rgb(97, 218, 251);
+    color: #333;
+}
+
+
+.float-right {
+  float: right;
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  color: white;
+}
+
+/* !Contact me Modal in Navbar */
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(25, 17, 17, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content{
+  background-color: gray;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.modal-header, .modal-footer{
+  padding: 10px;
+  margin: 10px;
+}
+
+.modal-title {
+  margin: 0;
+  color: #333;
+  font-size: 30px;
+}
+
+.modal-body {
+  padding: 1rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.modal-btn {
+  margin-top: 10px;
+    width: 60%;
+    background-color: #9a120d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.modal-btn:hover {
+  background-color: #c81711;
+}
+
+
 
 .App-logo {
-  /* width: 40vmin;
-  height: 30vmin; */
+  z-index: -1;
+  position: relative;
+  width: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
@@ -69,17 +147,18 @@ li a:hover {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-h1{
-  font-family:Georgia, 'Times New Roman', Times, serifs;
-  
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serifs;
+
 }
 
-.flex{
+.flex {
   width: 100%;
   display: inline-flex;
   justify-content: center;
@@ -89,77 +168,84 @@ h1{
 
 .btn {
   background-color: black;
-    color: white;
-    /* height: 100%;
+  color: white;
+  /* height: 100%;
     width: 100%; */
-    -webkit-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
-    -moz-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
-    box-shadow: 0px 0px 45px 21px rgba(255, 46, 192, 0.9);
-    border: 2px solid white;
-    border-radius: 20px;
-    margin-top: 10px;
-    padding: 14px 30px;
-    font-size: 20px;
-    cursor: pointer;
+  -webkit-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+  -moz-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+  box-shadow: 0px 0px 45px 21px rgba(255, 46, 192, 0.9);
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 14px 30px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   color: black;
   background-color: white;
   border: 2px solid black;
 }
 
 .image {
-  height: 100%;
-  width: 100%;
+  height: 30%;
+  width: 30%;
   -webkit-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
-    -moz-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
-    box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+  -moz-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+  box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
   border: 2px solid white;
   border-radius: 20px;
 }
 
-.shadowBox{
-  margin: 0 auto;
-  /* box-shadow: 0px 9px 30px 0px rgba(255, 149, 5, 0.3); */
-  width: 20%;
-  height: 20%;
-  border-radius: 20px;
-  margin-bottom: 4%;
-}
-.shadowBox:hover{
+.image:hover {
   height: 100%;
   width: 100%;
 }
 
-.width{
+.shadowBox {
+  margin: 0 auto;
+  /* box-shadow: 0px 9px 30px 0px rgba(255, 149, 5, 0.3); */
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  margin-bottom: 4%;
+}
+
+/* .shadowBox:hover {
+  height: 100%;
+  width: 100%;
+} */
+
+.width {
   word-wrap: break-word;
   margin: 0 auto;
   width: 50%;
 }
 
-.margin-bottom{
+.margin-bottom {
   margin-bottom: 4%;
 }
 
-textarea{
+
+.textarea {
   font-size: 20px;
   background-color: black;
   color: white;
   height: 100%;
-    width: 100%;
-    -webkit-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
-    -moz-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
-    box-shadow: 0px 0px 45px 21px rgba(255, 46, 192, 0.9);
-    border: 2px solid white;
-    border-radius: 20px;
-    padding: 10px;
-  }
+  width: 50%;
+  -webkit-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+  -moz-box-shadow: 0px 0px 56px 21px rgba(255, 46, 192, 0.9);
+  box-shadow: 0px 0px 45px 21px rgba(255, 46, 192, 0.9);
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px;
+}
 
-  ::placeholder{
-    color: white;
-    font-size: 20px;
-  }
+::placeholder {
+  color: white;
+  font-size: 20px;
+}
 
 .text-color {
   font-size: 1.5rem;
@@ -177,7 +263,7 @@ textarea{
   grid-gap: 2rem;
   padding: 2rem;
 }
-  
+
 
 .grid-child {
   border: 4px solid whitesmoke;
@@ -185,12 +271,13 @@ textarea{
   padding: 10px;
   cursor: pointer;
 }
+
 .grid-child:hover {
   background-color: whitesmoke;
   color: #212121;
 }
 
-.grid-child h3{
+.grid-child h3 {
   font-weight: 900;
 }
 
@@ -221,6 +308,64 @@ textarea{
   border: 4px solid whitesmoke;
 }
 
-.action-btn:hover{
+.action-btn:hover {
   background-color: black;
+}
+
+
+/* ! Contact me form */
+input[type=text],
+input[type=email],
+textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+form label {
+  font-size: 1.5rem;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: black;
+}
+
+input[type=submit] {
+  margin-top: 10px;
+  width: 80%;
+  background-color: #220d9a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #2520bc;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }

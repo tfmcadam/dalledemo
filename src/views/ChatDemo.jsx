@@ -1,19 +1,18 @@
 import '../App.css';
-import { LoadingSpinner }  from '../components/LoadingSinner';
 import { Configuration, OpenAIApi } from "openai";
 import OptionSelection from '../components/OptionSelection';
 import Translation from '../components/Translation';
 import { arrayItems } from '../AiOptions';
 import { useState } from 'react';
 
-const configuaration = new Configuration({
-    apiKey: process.env.REACT_APP_API_KEY,
-    
-});
-    
-const openai = new OpenAIApi(configuaration)
 
 export function ChatDemo(){
+    
+    const configuaration = new Configuration({
+        apiKey: process.env.REACT_APP_API_KEY,
+    });
+    const openai = new OpenAIApi(configuaration)
+
 
     const [option, setOption] = useState({});
     const [result, setResult] = useState("");
@@ -39,8 +38,11 @@ export function ChatDemo(){
         <div>
             
             {Object.values(option).length === 0 ? (
+
                 <OptionSelection arrayItems={arrayItems} selectOption={selectOption} />
-            ) : (
+            
+                ) : (
+                
                 <Translation doStuff={doStuff} setInput={setInput} result={result} />
             )}
         </div>

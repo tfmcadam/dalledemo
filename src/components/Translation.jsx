@@ -1,5 +1,4 @@
 import React from "react";
-import { LoadingSpinner } from "./LoadingSinner";
 
 export default function Translation({doStuff, setInput, result}) {
     return (

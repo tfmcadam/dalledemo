@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 const { Configuration, OpenAIApi, } = require("openai")
 const configuaration = new Configuration({
     apiKey: process.env.REACT_APP_API_KEY,
-    
 });
+    
 const openai = new OpenAIApi(configuaration);
 
 export const DalleDemo = () => {
@@ -31,8 +31,11 @@ export const DalleDemo = () => {
             <div className='shadowBox'>
                 {
                     imageUrl
+                        
                         ? <img className="image" src={imageUrl} alt="ai thing" />
-                        : <img src={logo} className="App-logo" alt="logo" />
+                        : 
+                        <p></p>
+                        // <img src={logo} className="App-logo" alt="logo" />
                 }
             </div>
             <div className='flex'>
@@ -40,7 +43,7 @@ export const DalleDemo = () => {
         placeholder='Crystal sitting in a chair, looking at her phone'
         onChange={(e) => setUserPrompt(e.target.value)}
         /> */}
-                <textarea className="dalle-text width margin-bottom" rows="4" col="200" onChange={(e) => setUserPrompt(e.target.value)}
+                <textarea className=". textarea dalle-text width margin-bottom" rows="4" col="200" onChange={(e) => setUserPrompt(e.target.value)}
                     placeholder='Add your image idea here...'></textarea>
             </div>
             <button className='btn' onClick={() => generateImage()}>Generate</button>
