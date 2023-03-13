@@ -1,6 +1,6 @@
-import logo from '../logo.svg';
+
 // import './App.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 const { Configuration, OpenAIApi, } = require("openai")
 const configuaration = new Configuration({
     apiKey: process.env.REACT_APP_API_KEY,
