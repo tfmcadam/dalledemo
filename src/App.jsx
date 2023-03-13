@@ -13,11 +13,8 @@ function App() {
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><Link to="/dalleII">
-            Dalle Demo
-          </Link></li>
-          <li><a href="/dalleII">Dalle Demo</a></li>
-          <li><a href="/chat">Chat Demo</a></li>
+          <li><Link to="/dalleII"> Dalle Demo</Link></li>
+          <li><Link to="/chat">Chat Demo</Link></li>
           <li className="float-right">
             <button className="open-btn" onClick={() => setShow(true)}>Contact Me</button>
             <Modal onClose={() => setShow(false)} show={show}/></li>
