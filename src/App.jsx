@@ -3,7 +3,7 @@ import { Modal } from './modal/Modal';
 import { useState } from 'react';
 import { DalleDemo } from './views/DalleDemo'
 import { ChatDemo } from './views/ChatDemo';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -13,6 +13,9 @@ function App() {
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><Link to="/dalleII">
+            Dalle Demo
+          </Link></li>
           <li><a href="/dalleII">Dalle Demo</a></li>
           <li><a href="/chat">Chat Demo</a></li>
           <li className="float-right">
