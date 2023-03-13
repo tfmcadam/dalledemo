@@ -1,5 +1,5 @@
 
-// import './App.css';
+import { LoadingSpinner } from '../components/LoadingSpinner';
 import { useState } from 'react';
 const { Configuration, OpenAIApi, } = require("openai")
 const configuaration = new Configuration({
@@ -10,10 +10,12 @@ const openai = new OpenAIApi(configuaration);
 
 export const DalleDemo = () => {
 
-    const [userPrompt, setUserPrompt] = useState("")
-    const [imageUrl, setImageUrl] = useState("")
+    const [userPrompt, setUserPrompt] = useState("");
+    const [imageUrl, setImageUrl] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const generateImage = async () => {
+        setIsLoading(true)
         const imageParameters = {
             prompt: userPrompt,
             n: 1,
@@ -23,20 +25,26 @@ export const DalleDemo = () => {
         const urlData = response.data.data[0].url
         console.log(urlData);
         setImageUrl(urlData);
+        setIsLoading(false);
     }
     return (
         <div className="App">
-            <h1>Generate a unique image With Dall-E based on what you want to See</h1>
+            
+            <h1 className='heading'>Dall-E II Demo</h1>
             <p className='margin-bottom'>Get creative and see what you get!</p>
             <div className='shadowBox'>
                 {
-                    imageUrl
-                        
-                        ? <img className="image" src={imageUrl} alt="ai thing" />
-                        : 
-                        <p></p>
-                        // <img src={logo} className="App-logo" alt="logo" />
+                isLoading && <LoadingSpinner/>
                 }
+                {
+                    imageUrl
+                    
+                    ? <img className="image" src={imageUrl} alt="ai thing" />
+                    : 
+                        <p></p>
+                }
+
+                
             </div>
             <div className='flex'>
                 {/* <input
@@ -47,19 +55,7 @@ export const DalleDemo = () => {
                     placeholder='Add your image idea here...'></textarea>
             </div>
             <button className='btn' onClick={() => generateImage()}>Generate</button>
-            {
-                imageUrl ? (
-                    <div>
-                        <h3>Prompt:</h3>
-                        <p>{userPrompt}</p>
-                        <h3>Image URL (copy/paste): </h3>
-                        <p className='width'>{imageUrl}</p>
-                    </div>
-
-                ) : (
-
-                    <p></p>
-                )}
+            
         </div>
     );
 }

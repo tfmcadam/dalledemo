@@ -3,16 +3,15 @@ import { Modal } from './modal/Modal';
 import { useState } from 'react';
 import { DalleDemo } from './views/DalleDemo'
 import { ChatDemo } from './views/ChatDemo';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Navigate, Link, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [show, setShow] = useState(false);
 
   return (
     <div className="App">
-      <nav>
+      <nav className='topnav'>
         <ul>
-          <li><a href="/">Home</a></li>
           <li><Link to="/dalleII"> Dalle Demo</Link></li>
           <li><Link to="/chat">Chat Demo</Link></li>
           <li className="float-right">
@@ -22,6 +21,7 @@ function App() {
       </nav>
 
       <Routes>
+        <Route path="/" element={<Navigate to="/chat" replace />} />
         <Route path="/dalleII" element={<DalleDemo/>} />
         <Route path='/chat' element={<ChatDemo/>} />
       </Routes>
