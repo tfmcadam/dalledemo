@@ -7,7 +7,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0.5,
-            max_tokens: 60,
+            max_tokens: 300,
             top_p: 0.3,
             frequency_penalty: 0.5,
             presence_penalty: 0.0,
@@ -20,7 +20,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0.3,
-            max_tokens: 120,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
@@ -33,7 +33,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0.8,
-            max_tokens: 60,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.5,
             presence_penalty: 0.0,
@@ -46,7 +46,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0,
-            max_tokens: 100,
+            max_tokens: 300,
             top_p: 1,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
@@ -59,7 +59,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0,
-            max_tokens: 60,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
@@ -73,7 +73,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0.7,
-            max_tokens: 64,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
@@ -86,7 +86,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0.3,
-            max_tokens: 100,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
@@ -99,7 +99,7 @@ export const arrayItems = [
         option: {
             model: "text-davinci-003",
             temperature: 0.8,
-            max_tokens: 60,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
@@ -112,7 +112,7 @@ export const arrayItems = [
         option: {
             model: "code-davinci-002",
             temperature: 0,
-            max_tokens: 64,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
@@ -125,7 +125,7 @@ export const arrayItems = [
         option: {
             model: "code-davinci-002",
             temperature: 0,
-            max_tokens: 64,
+            max_tokens: 300,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
