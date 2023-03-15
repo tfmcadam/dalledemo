@@ -12,7 +12,15 @@ export default function Translation({doStuff, setInput, result}) {
             </div>
             
             
-            <h3 className="result-text">{result.length > 0 ? result : "I have No response until you ask, but be careful what you ask for!"}</h3>
+            <h3 className="result-text">{result.length > 0 ? (
+                
+                result
+                
+                ) : (
+
+                    "I have No response until you ask, but be careful what you ask for!"
+                    
+                    )}</h3>
         </div>
     )
 }
