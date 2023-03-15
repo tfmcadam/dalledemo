@@ -5,7 +5,7 @@ const { Configuration, OpenAIApi, } = require("openai")
 const configuaration = new Configuration({
     apiKey: process.env.REACT_APP_API_KEY,
 });
-    
+
 const openai = new OpenAIApi(configuaration);
 
 export const DalleDemo = () => {
@@ -13,6 +13,13 @@ export const DalleDemo = () => {
     const [userPrompt, setUserPrompt] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter" && !e.shiftKey){
+            
+            generateImage();
+        }
+    }
 
     const generateImage = async () => {
         setIsLoading(true)
@@ -30,22 +37,22 @@ export const DalleDemo = () => {
     }
     return (
         <div className="App">
-            
+
             <h1 className='heading'>Dall-E II Demo</h1>
             <p className='margin-bottom'>Get creative and see what you get!</p>
             <div className='shadowBox'>
                 {
-                isLoading && <LoadingSpinner/>
+                    isLoading && <LoadingSpinner />
                 }
                 {
                     imageUrl
-                    
-                    ? <img className="image" src={imageUrl} alt="ai thing" />
-                    : 
+
+                        ? <img className="image" src={imageUrl} alt="ai thing" />
+                        :
                         <p></p>
                 }
 
-                
+
             </div>
             <div className='flex'>
                 {/* <input
@@ -53,10 +60,11 @@ export const DalleDemo = () => {
         onChange={(e) => setUserPrompt(e.target.value)}
         /> */}
                 <textarea className=". textarea dalle-text width margin-bottom" rows="4" col="200" onChange={(e) => setUserPrompt(e.target.value)}
+                onKeyDown={handleKeyPress}
                     placeholder='Add your image idea here...'></textarea>
             </div>
             <button className='btn' onClick={() => generateImage()}>Generate</button>
-            
+
         </div>
     );
 }
