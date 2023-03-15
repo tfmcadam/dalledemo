@@ -1,0 +1,54 @@
+/* !Contact me Modal in Navbar */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(25, 17, 17, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 1000px;
+    background-color: #333;
+    border-radius: 20px;
+    width: 75%;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px;
+    margin: 10px;
+}
+
+.modal-title {
+    margin: 0;
+    color: white;
+    font-size: 30px;
+}
+
+.modal-body {
+    padding: 1rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.modal-btn {
+    font-size: 20px;
+    margin-top: 10px;
+    width: 60%;
+    background-color: #9a120d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-btn:hover {
+    background-color: #c81711;
+}

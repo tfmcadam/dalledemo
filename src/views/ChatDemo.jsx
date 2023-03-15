@@ -1,4 +1,4 @@
-import '../App.css';
+import './ChatDemo.css'
 import { Configuration, OpenAIApi } from "openai";
 import OptionSelection from '../components/OptionSelection';
 import Translation from '../components/Translation';

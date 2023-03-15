@@ -1,4 +1,4 @@
-
+import "./DalleDemo.css"
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { useState } from 'react';
 const { Configuration, OpenAIApi, } = require("openai")
@@ -16,6 +16,7 @@ export const DalleDemo = () => {
 
     const generateImage = async () => {
         setIsLoading(true)
+        setImageUrl("")
         const imageParameters = {
             prompt: userPrompt,
             n: 1,

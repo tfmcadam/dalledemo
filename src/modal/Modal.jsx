@@ -1,4 +1,5 @@
 import React from "react";
+import "./Modal.css"
 import { ContactMe } from "../components/ContactMe";
 
 export const Modal = props => {
