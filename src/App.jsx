@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DalleDemo/>} />
         <Route path="/chat" element={<ChatDemo/>} />
+        <Route path="*" element={<DalleDemo />} />
       </Routes>
     </div>
   )

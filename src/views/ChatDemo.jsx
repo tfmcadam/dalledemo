@@ -24,7 +24,7 @@ export function ChatDemo(){
     
     const doStuff =  async () => {
         
-        let object = { prompt:input, ...option };
+        let object = { prompt: input, ...option };
         
         const response = await openai.createCompletion(object);
         console.log(object)
