@@ -13,10 +13,17 @@ export const DalleDemo = () => {
     const [userPrompt, setUserPrompt] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [style, setStyle] = useState(false)
+
+    const changeStyle = () => {
+            setStyle(!style)
+    }
+
+    const imageSize = style ? "image-big" : "image";
 
     const handleKeyPress = (e) => {
-        if (e.key === "Enter" && !e.shiftKey){
-            
+        if (e.key === "Enter" && !e.shiftKey) {
+
             generateImage();
         }
     }
@@ -47,20 +54,19 @@ export const DalleDemo = () => {
                 {
                     imageUrl
 
-                        ? <img className="image" src={imageUrl} alt="ai thing" />
-                        :
+                        ? (
+
+                            <button className="img-btn" onClick={changeStyle}><img className={imageSize} src={imageUrl} alt="ai thing" /></button>
+
+                        ) :
+
                         <p></p>
                 }
-
-
             </div>
+
             <div className='flex'>
-                {/* <input
-        placeholder='Crystal sitting in a chair, looking at her phone'
-        onChange={(e) => setUserPrompt(e.target.value)}
-        /> */}
                 <textarea className=". textarea dalle-text width margin-bottom" rows="4" col="200" onChange={(e) => setUserPrompt(e.target.value)}
-                onKeyDown={handleKeyPress}
+                    onKeyDown={handleKeyPress}
                     placeholder='Add your image idea here...'></textarea>
             </div>
             <button className='btn' onClick={() => generateImage()}>Generate</button>
