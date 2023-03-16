@@ -31,18 +31,18 @@ export const NavBar = () => {
 
         <nav >
             <h1 className="title"> OpenAi Fun</h1>
-            {(toggleMenu || screenWidth > 700) &&
+            {(toggleMenu || screenWidth > 1020) &&
                 (
                     <ul className="list">
                         
-                        <li className="items"><Link to="/">Dalle Demo</Link></li>
-                        <li className="items"><Link to="/chat"> Chat Demo</Link></li>
+                    <li className="items"><Link to="/" onClick={toggleNav}>Dalle Demo</Link></li>
+                    <li className="items"><Link to="/chat" onClick={toggleNav}> Chat Demo</Link></li>
                         <li className="items">
-                            <button className="open-btn " onClick={() => setShow(true)}>Contact Me</button>
+                            <button className="open-btn" onClick={() => setShow(true)}>Contact Me</button>
                             <Modal onClose={() => setShow(false)} show={show} /></li>
                     </ul>
                 )}
-            <button onClick={toggleNav} className="nav-btn"><i class="fa-sharp fa-solid fa-bars"></i></button>
+            <button onClick={toggleNav} className="nav-btn"><i className="fa-sharp fa-solid fa-bars"></i></button>
 
         </nav>
     )
