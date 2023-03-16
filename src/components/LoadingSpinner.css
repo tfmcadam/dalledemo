@@ -17,7 +17,6 @@
         box-shadow: 0px 0px 45px 21px rgba(255, 46, 192, 0.9);
     border-top: 10px solid white;
     border-radius: 50%;
-    outline: 4px solid black;
     animation: spinner .90s linear infinite;
 }
 
