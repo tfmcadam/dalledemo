@@ -27,6 +27,10 @@ export const NavBar = () => {
         setToggleMenu(!toggleMenu)
     }
 
+    const resetPage = () => {
+        window.location.href = "/chat"
+    }
+
     return (
 
         <nav >
@@ -34,9 +38,12 @@ export const NavBar = () => {
             {(toggleMenu || screenWidth > 1020) &&
                 (
                     <ul className="list">
-                        
-                    <li className="items"><Link to="/" onClick={toggleNav}>Dalle Demo</Link></li>
-                    <li className="items"><Link to="/chat" onClick={toggleNav}> Chat Demo</Link></li>
+
+                        <li className="items"><Link to="/" onClick={toggleNav}>Dalle Demo</Link></li>
+                        <li className="items"><Link to="/chat" onClick={() => {
+                            toggleNav();
+                            resetPage()
+                        }}> Chat Demo</Link></li>
                         <li className="items">
                             <button className="open-btn" onClick={() => setShow(true)}>Contact Me</button>
                             <Modal onClose={() => setShow(false)} show={show} /></li>
