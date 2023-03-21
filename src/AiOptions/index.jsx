@@ -3,6 +3,7 @@ export const arrayItems = [
     {
         name: "Marv with the honest answers",
         id: "marv",
+
         description: "He's a straight shooter",
         option: {
             model: "text-davinci-003",
@@ -27,13 +28,27 @@ export const arrayItems = [
         }
     },
     {
+        name: "Chat",
+        id: "chat",
+        description: "Open ended conversation with an AI assistant",
+        option: {
+            model: "text-davinci-003",
+            temperature: 0.9,
+            max_tokens: 300,
+            top_p: 1.0,
+            frequency_penalty: 0.0,
+            presence_penalty: 0.6,
+            stop: [" Human", " AI:"],
+        }
+    },
+    {
         name: "Micro Horror Story Creator",
         id: "MHScreator",
-        description: "Creates two to three sentance short horror stories from a topic input.",
+        description: "Creates a two to three sentence short horror stories from a topic input.",
         option: {
             model: "text-davinci-003",
             temperature: 0.8,
-            max_tokens: 300,
+            max_tokens: 200,
             top_p: 1.0,
             frequency_penalty: 0.5,
             presence_penalty: 0.0,

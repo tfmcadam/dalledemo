@@ -1,4 +1,5 @@
 import './ChatDemo.css'
+import { LoadingSpinner } from '../components/LoadingSpinner';
 import { Configuration, OpenAIApi } from "openai";
 import OptionSelection from '../components/OptionSelection';
 import Translation from '../components/Translation';
@@ -13,17 +14,22 @@ export function ChatDemo(){
     });
     const openai = new OpenAIApi(configuaration)
 
-
+    const [isLoading, setIsLoading] = useState(false)
     const [option, setOption] = useState({});
+    const [imageUrl, setImageUrl] = useState("")
     const [result, setResult] = useState("");
     const [input, setInput] = useState("");
+    const [placeHolder, setPlaceHolder] = useState("")
     
     const selectOption = (option) => {
         setOption(option)
     };
+    const generatePlaceHolder = (placeHolder) => {
+        setPlaceHolder(placeHolder)
+    }
     
     const doStuff =  async () => {
-        
+        setIsLoading(true)
         let object = { prompt: input, ...option };
         
         const response = await openai.createCompletion(object);
@@ -31,6 +37,19 @@ export function ChatDemo(){
 
         setResult(response.data.choices[0].text);
         console.log(response)
+        
+
+        const imageParameters =  {
+            prompt: response.data.choices[0].text,
+            n: 1,
+            size: "1024x1024",
+        }
+        const imageResponse = await openai.createImage(imageParameters);
+        const urlData = imageResponse.data.data[0].url
+        console.log(urlData);
+        setImageUrl(urlData);
+        setIsLoading(false);
+    
     }
         
         
@@ -39,11 +58,11 @@ export function ChatDemo(){
             
             {Object.values(option).length === 0 ? (
 
-                <OptionSelection arrayItems={arrayItems} selectOption={selectOption} />
+                <OptionSelection arrayItems={arrayItems} selectOption={selectOption} generatePlaceHolder={generatePlaceHolder} />
             
                 ) : (
                 
-                <Translation doStuff={doStuff} setInput={setInput} result={result} />
+                <Translation doStuff={doStuff} setInput={setInput} result={result} placeHolder={placeHolder} imageUrl={imageUrl}/>
             )}
         </div>
     )
