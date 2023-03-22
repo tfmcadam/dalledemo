@@ -46,7 +46,7 @@ export const arrayItems = [
         name: "Micro Horror Story Creator",
         id: "MHScreator",
         description: "Creates a two to three sentence short horror stories from a topic input.",
-        preprompt: "Write a 3 sentance Scary story with these parameters: \n",
+        preprompt: "Write a 3 sentence Scary story with these parameters: \n",
         option: {
             model: "text-davinci-003",
             temperature: 0.8,
