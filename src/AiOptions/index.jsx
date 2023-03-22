@@ -3,7 +3,7 @@ export const arrayItems = [
     {
         name: "Marv with the honest answers",
         id: "marv",
-
+        preprompt: "Marv,\n ",
         description: "He's a straight shooter",
         option: {
             model: "text-davinci-003",
@@ -18,6 +18,7 @@ export const arrayItems = [
         name: "Recipe Creator",
         id: "recipes",
         description: "Create a recipe from a list of ingredients",
+        preprompt: "Make a Recipe and name it:\n ",
         option: {
             model: "text-davinci-003",
             temperature: 0.3,
@@ -30,7 +31,7 @@ export const arrayItems = [
     {
         name: "Chat",
         id: "chat",
-        description: "Open ended conversation with an AI assistant",
+        description: "Have an open ended conversation with an AI assistant",
         option: {
             model: "text-davinci-003",
             temperature: 0.9,
@@ -45,6 +46,7 @@ export const arrayItems = [
         name: "Micro Horror Story Creator",
         id: "MHScreator",
         description: "Creates a two to three sentence short horror stories from a topic input.",
+        preprompt: "Write a 3 sentance Scary story with these parameters: \n",
         option: {
             model: "text-davinci-003",
             temperature: 0.8,
@@ -58,6 +60,7 @@ export const arrayItems = [
         name: 'Q&A',
         id: "q&a",
         description: "Answer questions based on existing knowledge.",
+        preprompt: "Ask a question: \n",
         option: {
             model: "text-davinci-003",
             temperature: 0,
@@ -71,6 +74,7 @@ export const arrayItems = [
         name: "Grammar Correction",
         id: "grammarCorrection",
         description: "Corrects sentances into standard English.",
+        preprompt: "Please Correct this Grammar, \n",
         option: {
             model: "text-davinci-003",
             temperature: 0,
@@ -85,6 +89,7 @@ export const arrayItems = [
         name: "Summarize for a 2nd Grader",
         id: "summary",
         description: "Translates difficult text into simplier concepts.",
+        preprompt:"Explain this to a second grader: \n",
         option: {
             model: "text-davinci-003",
             temperature: 0.7,
@@ -98,6 +103,7 @@ export const arrayItems = [
         name: "English to other languages",
         id: "translate",
         description:"Translates English text into French, Spanish, and Japanese.",
+        preprompt: "Translate the following into the specified language \n",
         option: {
             model: "text-davinci-003",
             temperature: 0.3,
@@ -111,6 +117,7 @@ export const arrayItems = [
         name: "Movie to Emoji",
         id: "movieToEmoji",
         description: "Convert Movie Titles into emoji.",
+        preprompt: "Convert this Movie Title to emoji: \n",
         option: {
             model: "text-davinci-003",
             temperature: 0.8,
@@ -121,9 +128,10 @@ export const arrayItems = [
         },
     },
     {
-        name: "Explain Code",
+        name: "Explain this Code",
         id:"explainCode",
         description: "Explain a complicated piece of Code.",
+        preprompt: "Explain the following piece of code: \n",
         option: {
             model: "code-davinci-002",
             temperature: 0,
@@ -137,6 +145,7 @@ export const arrayItems = [
         name: "Javascript to Python",
         id: "jstopy",
         description: "Convert simple JavaScript expressions to Python.",
+        preprompt: "Convert the following code to Python: \n",
         option: {
             model: "code-davinci-002",
             temperature: 0,

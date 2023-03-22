@@ -1,5 +1,4 @@
 import './ChatDemo.css'
-import { LoadingSpinner } from '../components/LoadingSpinner';
 import { Configuration, OpenAIApi } from "openai";
 import OptionSelection from '../components/OptionSelection';
 import Translation from '../components/Translation';
@@ -14,7 +13,6 @@ export function ChatDemo(){
     });
     const openai = new OpenAIApi(configuaration)
 
-    const [isLoading, setIsLoading] = useState(false)
     const [option, setOption] = useState({});
     const [imageUrl, setImageUrl] = useState("")
     const [result, setResult] = useState("");
@@ -29,40 +27,44 @@ export function ChatDemo(){
     }
     
     const doStuff =  async () => {
-        setIsLoading(true)
-        let object = { prompt: input, ...option };
+        let preprompt = placeHolder
+        let object = { prompt: preprompt + input, ...option };
         
         const response = await openai.createCompletion(object);
         console.log(object)
 
         setResult(response.data.choices[0].text);
         console.log(response)
-        
 
         const imageParameters =  {
             prompt: response.data.choices[0].text,
             n: 1,
             size: "1024x1024",
         }
+
         const imageResponse = await openai.createImage(imageParameters);
         const urlData = imageResponse.data.data[0].url
         console.log(urlData);
         setImageUrl(urlData);
-        setIsLoading(false);
-    
     }
         
         
     return (
         <div>
-            
             {Object.values(option).length === 0 ? (
 
                 <OptionSelection arrayItems={arrayItems} selectOption={selectOption} generatePlaceHolder={generatePlaceHolder} />
             
                 ) : (
                 
-                <Translation doStuff={doStuff} setInput={setInput} result={result} placeHolder={placeHolder} imageUrl={imageUrl}/>
+                <Translation 
+                doStuff={doStuff} 
+                setInput={setInput} 
+                result={result} 
+                placeHolder={placeHolder} 
+                imageUrl={imageUrl} 
+                />
+
             )}
         </div>
     )

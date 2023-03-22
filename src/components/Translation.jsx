@@ -1,11 +1,13 @@
 import React from "react";
 import "../views/ChatDemo.css"
+import { LoadingSpinner } from "./LoadingSpinner";
 
 
 export default function Translation({doStuff, setInput, result, placeHolder, imageUrl}) {
     return (
         <div className="flex-text">
             <h1>{placeHolder.name}</h1>
+            
             {
                 imageUrl
 
@@ -30,6 +32,7 @@ export default function Translation({doStuff, setInput, result, placeHolder, ima
             <textarea className="text-area" 
             cols={20} rows={5}
             placeholder={placeHolder.description} 
+            defaultValue={placeHolder.preprompt}
             onChange={(e) => setInput(e.target.value)}
             
             ></textarea>
