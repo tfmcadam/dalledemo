@@ -26,6 +26,9 @@
 }
 
 .modal-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin: 0;
     color: white;
     font-size: 30px;
@@ -51,4 +54,25 @@
 
 .modal-btn:hover {
     background-color: #c81711;
+}
+
+#linkedIn {
+    height: 60px;
+    color: rgb(0, 119, 181);
+}
+
+#gitHub {
+    color: white;
+}
+
+#gitHub:hover{
+    background-color: white;
+    color: #333;
+    border-radius: 25%;
+}
+
+#linkedIn:hover{
+    background-color: white;
+    color: rgb(0, 119, 181);
+    border-radius: 25%;
 }
